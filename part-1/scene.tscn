@@ -1,0 +1,136 @@
+[gd_scene load_steps=10 format=3 uid="uid://fojue6puer0l"]
+
+[ext_resource type="Script" uid="uid://benr6hutr3yo7" path="res://Scene.cs" id="1_nxogm"]
+[ext_resource type="PackedScene" uid="uid://dixqrfmvyl4d1" path="res://sqare.tscn" id="2_3253y"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nxogm"]
+sky_top_color = Color(0.7679601, 0.16562459, 0.4574622, 1)
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_3253y"]
+sky_material = SubResource("ProceduralSkyMaterial_nxogm")
+
+[sub_resource type="Environment" id="Environment_u3cyc"]
+background_mode = 2
+sky = SubResource("Sky_3253y")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drvgu"]
+albedo_color = Color(0.58431375, 0.7529412, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ulcgi"]
+material = SubResource("StandardMaterial3D_drvgu")
+size = Vector3(10, 0.01, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nxogm"]
+albedo_color = Color(0.80173963, 1.3167266, 1.2351445, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3253y"]
+material = SubResource("StandardMaterial3D_nxogm")
+size = Vector3(11111, 1, 11111)
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("undo")]
+script = ExtResource("1_nxogm")
+undo = NodePath("Undo")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_u3cyc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_ulcgi")
+
+[node name="Area3D" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="Area3D2" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 4)
+
+[node name="Area3D3" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="Area3D4" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="Area3D5" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="Area3D6" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 2)
+
+[node name="Area3D7" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="Area3D8" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="Area3D9" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="Area3D10" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="Area3D11" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Area3D12" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Area3D13" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+
+[node name="Area3D14" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Area3D15" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Area3D16" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -2)
+
+[node name="Area3D17" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+
+[node name="Area3D18" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Area3D19" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="Area3D20" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="Area3D21" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="Area3D22" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -4)
+
+[node name="Area3D23" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Area3D24" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+
+[node name="Area3D25" parent="StaticBody3D" instance=ExtResource("2_3253y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -33.231407, 0)
+mesh = SubResource("BoxMesh_3253y")
+
+[node name="Undo" type="Button" parent="."]
+offset_right = 82.0
+offset_bottom = 49.0
+text = "Undo"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.506094, -0.67144465, 0.5413234, -1.3284198e-08, 0.6276371, 0.7785061, -0.8624784, 0.39399725, -0.31764334, 6.941785, 6.334414, -3.5138931)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.7474436, 0.24637608, -0.6169497, 0.17426562, 0.82344896, 0.5399661, 0.64106125, -0.5111073, 0.5725468, 0, 6.992831, 0)
+shadow_enabled = true
+
+[connection signal="pressed" from="Undo" to="." method="OnUndoPressed"]

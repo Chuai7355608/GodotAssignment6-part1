@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dixqrfmvyl4d1"]
+
+[ext_resource type="Script" uid="uid://d23ibjubgyenu" path="res://Sqare.cs" id="1_eqkmy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2llw4"]
+albedo_color = Color(0.9956208, 0.5456139, 0.5935313, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eqkmy"]
+material = SubResource("StandardMaterial3D_2llw4")
+size = Vector3(2, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tjlpd"]
+size = Vector3(2, 1, 2)
+
+[node name="Area3D" type="Area3D" node_paths=PackedStringArray("target")]
+script = ExtResource("1_eqkmy")
+target = NodePath("MeshInstance3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_eqkmy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_tjlpd")
