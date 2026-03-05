@@ -49,36 +49,6 @@ public partial class Sqare : Area3D
         }
     }
 	
-	// public override void _Ready()
-	// {
-	// 	Visible = false;
-	// 	this.InputRayPickable = true;
-
-	// }
-
-	// public void OnMouseEntered()
-	// {
-	// 	if(Input.IsActionJustPressed("left_click"))
-	// 	{
-	// 		var show = new AreaCommand(this, true);
-	// 		CommandHandler.Instance.runCommand(show);	
-	// 	}
-	// 	if(Input.IsActionJustPressed("right_click"))
-	// 	{
-	// 		var hide = new AreaCommand(this,false);
-	// 		CommandHandler.Instance.runCommand(hide);
-	// 	}
-	// 	GD.Print("has entered");
-	// }
-
-	
-	// public override void _Process(double delta)
-	// {
-	// }
-
-
-
-	
 }
 
 public class AreaCommand : ICommand

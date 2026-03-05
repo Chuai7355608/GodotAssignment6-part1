@@ -16,6 +16,7 @@ public interface ICommand
 
 public class CommandHandler
 {
+	//a singleton
 	private static CommandHandler _instance;
 	public static CommandHandler Instance
 	{
